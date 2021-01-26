@@ -1,0 +1,24 @@
+PODS:
+  - Favoritos (1.0.0):
+    - SnapKit
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Favoritos (from `../`)
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  Favoritos:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Favoritos: a74ef5137f30d983a6e5f06cbb220982c782b4cd
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: da9761c4942e1f9d8a7b96c0d4515037d54d1d90
+
+COCOAPODS: 1.10.1
