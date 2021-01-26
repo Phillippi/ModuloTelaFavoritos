@@ -7,8 +7,11 @@
 
 import UIKit
 import SnapKit
+import TelaDeDetalhes
 
 public class FavoritosViewController: UIViewController {
+    
+   // let viewModel: FavoritosViewModel = FavoritosViewModel()
 
     //MARK: - Criando a tela
     
@@ -112,7 +115,6 @@ extension FavoritosViewController: ViewConfiguration {
             make.left.equalTo(view.snp.left).offset(0)
             make.right.equalTo(view.snp.right).inset(0)
             make.bottom.equalTo(view).inset(0)
-//            make.height.equalTo(view)
         }
         collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(favoritosView.snp.top).offset(20)
@@ -128,7 +130,8 @@ extension FavoritosViewController: ViewConfiguration {
 }
     //MARK: - Configuração CollectionView
 
-extension FavoritosViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension FavoritosViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
@@ -144,5 +147,11 @@ extension FavoritosViewController: UICollectionViewDelegateFlowLayout, UICollect
         cell.layer.cornerRadius = 15
         cell.backgroundColor = UIColor(red: 139/255, green: 153/255, blue: 90/255, alpha: 1)
         return cell
+    }
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let nc = self.navigationController else {return}
+        let vcDetails = Detalhes(navigationController: nc)
+        vcDetails.abreDetalhes(initials: "BTC", currentValueOFCoin: "31,010.20", isFavorite: false, hourSell: "310,010.20", monthSell: "1,310.010.20", yearSell: "100,310.010.20")
+        
     }
 }

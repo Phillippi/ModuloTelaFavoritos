@@ -5,6 +5,7 @@ platform :ios, '10.0'
 target 'Favoritos_Example' do
   pod 'Favoritos', :path => '../'
   pod  'SnapKit' ,  '~> 5.0.0'
+  pod  'TelaDeDetalhes', :git => 'https://github.com/bittencourthiago/TelaDeDetalhes.git'
 
   target 'Favoritos_Tests' do
     inherit! :search_paths

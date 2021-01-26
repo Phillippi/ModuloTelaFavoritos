@@ -271,11 +271,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Favoritos_Example/Pods-Favoritos_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Favoritos/Favoritos.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TelaDeDetalhes/TelaDeDetalhes.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Favoritos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TelaDeDetalhes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

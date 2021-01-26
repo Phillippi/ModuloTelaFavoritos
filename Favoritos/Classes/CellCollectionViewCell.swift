@@ -12,13 +12,13 @@ class CellCollectionViewCell: UICollectionViewCell {
     //MARK: - Váriáveis
     
     let corDaFonte = UIColor(red: 230/255, green: 233/255, blue: 212/255, alpha: 1)
+    let data = ["Bitcoin", "BTC", "$ 31,010.20"]
 
     //MARK: - Criação dos itens da célula
     
     private lazy var icone: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "teste.png")
-//        view.backgroundColor = .orange
         return view
     }()
     private lazy var labelNome: UILabel = {
@@ -26,7 +26,7 @@ class CellCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 23, weight: .light)
         label.textAlignment = .center
         label.textColor = corDaFonte
-        label.text = "Bitcoin"
+        label.text = data[0]
         return label
     }()
     private lazy var labelSigla: UILabel = {
@@ -34,7 +34,7 @@ class CellCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 17, weight: .light)
         label.textColor = corDaFonte
         label.textAlignment = .center
-        label.text = "BTC"
+        label.text = data[1]
         return label
     }()
     private lazy var labelValor: UILabel = {
@@ -42,7 +42,7 @@ class CellCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 23, weight: .light)
         label.textColor = corDaFonte
         label.textAlignment = .center
-        label.text = "$ 31,010.20"
+        label.text = data[2]
         return label
     }()
 
